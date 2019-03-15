@@ -1,0 +1,17 @@
+<table border="1">
+  <th>ID</th>
+  <th>NAME</th>
+  <th>GENDER</th>
+
+<tbody>
+  <tr *ngFor="let name of employees;">
+    <td>{{name.id}}</td>
+    <td>{{name.name | reverse:name.gender}}</td>
+    <td>{{name.gender}}</td>
+</tbody>
+</table>
+<p appForward>{{data}}</p>
+FirstNumber:<input type="text"[(ngModel)]="firstnumber">
+SecondNumber<input type="text"[(ngModel)]="secondnumber">
+<input type="button"(click)="add()" value="addme!!">
+<b>{{result}}</b>
